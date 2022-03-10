@@ -27,6 +27,6 @@ PA4 TDO<br/>
 reference:<br/>
 http://wiki.geniekits.com/doku.php?id=usb_express:cmsis-dap<br/>
 
-![stm32f401ccu6_0](https://github.com/forlfs/stm32f401ccu6-cmsis-dap/blob/main/pic/stm32f401ccu6_0.jpg)<br/>
+![stm32f401ccu6_0](pic/stm32f401ccu6_0.jpg)<br/>
 
-![stm32f401ccu6_1](https://github.com/forlfs/stm32f401ccu6-cmsis-dap/blob/main/pic/stm32f401ccu6_1.jpg)<br/>
+![stm32f401ccu6_1](pic/stm32f401ccu6_1.jpg)<br/>
