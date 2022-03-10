@@ -22,6 +22,9 @@
 #include "main.h"
 #include "cmsis_os.h"
 #include "usb_device.h"
+#include "osObjects.h"
+#include "DAP_config.h"
+#include "DAP.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -211,8 +214,13 @@ static void MX_GPIO_Init(void)
 /* USER CODE END Header_StartDefaultTask */
 void StartDefaultTask(void *argument)
 {
+  DAP_Setup();
+
   /* init code for USB_DEVICE */
   MX_USB_DEVICE_Init();
+
+  DAP_ThreadId = osThreadNew(DAP_Thread, NULL, &DAP_ThreadAttr);
+
   /* USER CODE BEGIN 5 */
   /* Infinite loop */
   for(;;)

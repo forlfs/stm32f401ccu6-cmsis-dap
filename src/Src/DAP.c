@@ -294,8 +294,19 @@ static uint32_t DAP_SWJ_Pins(const uint8_t *request, uint8_t *response) {
   if ((select & (1U << DAP_SWJ_nTRST)) != 0U) {
     PIN_nTRST_OUT(value >> DAP_SWJ_nTRST);
   }
-  if ((select & (1U << DAP_SWJ_nRESET)) != 0U){
+  if ((select & (1U << DAP_SWJ_nRESET)) != 0U) {
     PIN_nRESET_OUT(value >> DAP_SWJ_nRESET);
+#if (DAP_SWD != 0)
+    if ((value & DAP_SWJ_nRESET) == 0U && DAP_Data.debug_port == DAP_PORT_SWD) {
+      uint32_t x = 0;
+      x = 0xE000ED0C;
+      SWD_Transfer(0x05, &x);
+      Delayms(1);
+      x = 0x05FA0004;
+      SWD_Transfer(0x0D, &x);
+      Delayms(1);
+    }
+#endif
   }
 
   if (wait != 0U) {

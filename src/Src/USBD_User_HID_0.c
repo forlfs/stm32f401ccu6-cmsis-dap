@@ -45,9 +45,10 @@
 #define   osObjectsExternal
 #include "osObjects.h"
 #include "rl_usb.h"
-#include "RTE\USB\USBD_Config_HID_0.h"
+//#include "RTE\USB\USBD_Config_HID_0.h"
 #include "DAP_config.h"
 #include "DAP.h"
+#include <stdbool.h>
 
 
 #if (USBD_HID0_OUT_REPORT_MAX_SZ != DAP_PACKET_SIZE)

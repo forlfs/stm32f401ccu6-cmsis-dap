@@ -36,6 +36,12 @@ BUILD_DIR = build
 ######################################
 # C sources
 C_SOURCES =  \
+Src/DAP.c \
+Src/JTAG_DP.c \
+Src/SW_DP.c \
+Src/SWO.c \
+Src/USBD_User_HID_0.c \
+Src/device.c \
 Src/main.c \
 Src/freertos.c \
 Src/usb_device.c \
