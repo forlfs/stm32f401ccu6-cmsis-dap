@@ -40,4 +40,4 @@ http://wiki.geniekits.com/doku.php?id=usb_express:cmsis-dap<br/>
 https://imuncle.github.io/content.html?id=83<br/>
 https://imuncle.github.io/content.html?id=88<br/>
 
-![stm32f401ccu6_0](pic/stm32f401ccu6.jpg)<br/>
+![stm32f401ccu6](pic/stm32f401ccu6.jpg)<br/>
