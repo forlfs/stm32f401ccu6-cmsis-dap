@@ -36,7 +36,6 @@ PA3 TDI<br/>
 PA4 TDO<br/>
 
 reference:<br/>
-http://wiki.geniekits.com/doku.php?id=usb_express:cmsis-dap<br/>
 https://imuncle.github.io/content.html?id=83<br/>
 https://imuncle.github.io/content.html?id=88<br/>
 
