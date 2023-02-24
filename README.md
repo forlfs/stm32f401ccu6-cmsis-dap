@@ -38,5 +38,3 @@ PA4 TDO<br/>
 reference:<br/>
 https://imuncle.github.io/content.html?id=83<br/>
 https://imuncle.github.io/content.html?id=88<br/>
-
-![stm32f401ccu6](pic/stm32f401ccu6.jpg)<br/>

@@ -429,14 +429,14 @@ __STATIC_FORCEINLINE void     PIN_nRESET_OUT (uint32_t bit) {
     HAL_GPIO_WritePin(GPIOA, PIN_nRESET, 1);
 
     GPIO_InitTypeDef GPIO_InitStruct = {0};
-    GPIO_InitStruct.Pin = GPIO_PIN_2;
+    GPIO_InitStruct.Pin = PIN_nRESET;
     GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
     GPIO_InitStruct.Pull = GPIO_NOPULL;
     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
     HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
   } else {
     GPIO_InitTypeDef GPIO_InitStruct = {0};
-    GPIO_InitStruct.Pin = GPIO_PIN_2;
+    GPIO_InitStruct.Pin = PIN_nRESET;
     GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_OD;
     GPIO_InitStruct.Pull = GPIO_PULLUP;
     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
@@ -468,7 +468,7 @@ It is recommended to provide the following LEDs for status indication:
            - 0: Connect LED OFF: debugger is not connected to CMSIS-DAP Debug Unit.
 */
 __STATIC_INLINE void LED_CONNECTED_OUT (uint32_t bit) {
-  HAL_GPIO_WritePin(GPIOC, PIN_LED, bit & 1);
+  HAL_GPIO_WritePin(GPIOC, PIN_LED, (~bit) & 1);
 }
 
 /** Debug Unit: Set status Target Running LED.
